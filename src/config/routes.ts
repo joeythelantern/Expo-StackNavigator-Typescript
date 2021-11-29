@@ -1,5 +1,6 @@
 import IRouteProps from '../library/RouteProps';
 import AboutScreen from '../screens/About';
+import ContactScreen from '../screens/Contact';
 import HomeScreen from '../screens/Home';
 
 const routes: IRouteProps[] = [
@@ -10,6 +11,10 @@ const routes: IRouteProps[] = [
     {
         name: 'About',
         component: AboutScreen
+    },
+    {
+        name: 'Contact',
+        component: ContactScreen
     }
 ];
 

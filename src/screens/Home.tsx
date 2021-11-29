@@ -2,13 +2,14 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useEffect } from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import { useLogging } from '../hooks/useLogging';
-import IScreenProps from '../library/ScreenProps';
+import { IStackScreenProps } from '../library/StackScreenProps';
 
-const HomeScreen: React.FunctionComponent<IScreenProps> = props => {
+const HomeScreen: React.FunctionComponent<IStackScreenProps> = props => {
     const [logging] = useLogging('Home Screen');
+    const { navigation, route } = props;
 
     useEffect(() => {
-        logging.info(props);
+        logging.info({ navigation, route });
     }, [logging]);
 
     return (
@@ -16,7 +17,11 @@ const HomeScreen: React.FunctionComponent<IScreenProps> = props => {
             <Text>Home Screen</Text>
             <Button
                 title="About"
-                onPress={() => props.navigation.navigate("About")}
+                onPress={() => navigation.navigate("About")}
+            />
+            <Button
+                title="Contact"
+                onPress={() => navigation.navigate("Contact")}
             />
             <StatusBar style="auto" />
         </View>

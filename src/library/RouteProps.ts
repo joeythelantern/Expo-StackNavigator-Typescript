@@ -1,6 +1,6 @@
-import IScreenProps from "./ScreenProps";
+import { IStackScreenProps } from './StackScreenProps';
 
 export default interface IRouteProps {
-    component: React.FunctionComponent<IScreenProps>;
+    component: React.FunctionComponent<IStackScreenProps>;
     name: string;
 }
