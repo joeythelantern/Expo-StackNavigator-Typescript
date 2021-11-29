@@ -4,7 +4,7 @@ import { Button, StyleSheet, Text, View } from 'react-native';
 import { useLogging } from '../hooks/useLogging';
 import { IStackScreenProps } from '../library/StackScreenProps';
 
-const AboutScreen: React.FunctionComponent<IStackScreenProps> = props => {
+const AboutScreen: React.FunctionComponent<IStackScreenProps> = (props) => {
     const [logging] = useLogging('About Screen');
     const { navigation, route } = props;
 
@@ -15,14 +15,8 @@ const AboutScreen: React.FunctionComponent<IStackScreenProps> = props => {
     return (
         <View style={styles.container}>
             <Text>About Screen</Text>
-            <Button
-                title="Home"
-                onPress={() => navigation.navigate("Home")}
-            />
-            <Button
-                title="Contact"
-                onPress={() => navigation.navigate("Contact")}
-            />
+            <Button title="Home" onPress={() => navigation.navigate('Home')} />
+            <Button title="Contact" onPress={() => navigation.navigate('Contact')} />
             <StatusBar style="auto" />
         </View>
     );
@@ -33,8 +27,8 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: 'cyan',
         alignItems: 'center',
-        justifyContent: 'center',
-    },
+        justifyContent: 'center'
+    }
 });
 
 export default AboutScreen;
