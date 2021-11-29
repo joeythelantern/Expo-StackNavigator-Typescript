@@ -11,19 +11,13 @@ export default function App() {
 
     useEffect(() => {
         logging.info('Loading application.');
-    }, [logging])
+    }, [logging]);
 
     return (
         <NavigationContainer>
-            <Stack.Navigator
-                initialRouteName={"Home"}
-            >
+            <Stack.Navigator initialRouteName={'Home'}>
                 {routes.map((r, i) => (
-                    <Stack.Screen 
-                        key={i}
-                        name={r.name}
-                        component={r.component}
-                    />
+                    <Stack.Screen key={i} name={r.name} component={r.component} />
                 ))}
             </Stack.Navigator>
         </NavigationContainer>
