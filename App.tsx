@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import React, { useEffect } from 'react';
 import routes from './src/config/routes';
 import { useLogging } from './src/hooks/useLogging';
+import 'react-native-gesture-handler';
 
 const Stack = createStackNavigator();
 
